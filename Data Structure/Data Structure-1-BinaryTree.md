@@ -11,8 +11,6 @@ B-->E
 C-->NULL
 C-->F
 ```
-[TOC]
-
 ## 二叉树的遍历
 
 ### 先序遍历
@@ -67,19 +65,19 @@ public List<Integer> preorderTraversal2(TreeNode root) {
 
 ```java
 public List<Integer> inorderTraversal(TreeNode root) {
-        rs = new ArrayList<>();
-        iTBacktrack(root);
-        return rs;
-    }
+    rs = new ArrayList<>();
+    iTBacktrack(root);
+    return rs;
+}
 ```
 ```java
 private void iTBacktrack(TreeNode root) {
-        if (root == null) 
-            return;
-        iTBacktrack(root.left);
-        rs.add(root.val);
-        iTBacktrack(root.right);
-    }
+    if (root == null) 
+        return;
+    iTBacktrack(root.left);
+    rs.add(root.val);
+    iTBacktrack(root.right);
+}
 ```
 * 迭代
 
@@ -179,8 +177,6 @@ public List<List<Integer>> levelorderTraversal(TreeNode root) {
         return res;
     }
 ```
-
----
 
 ## 使用数组创建二叉树
 
